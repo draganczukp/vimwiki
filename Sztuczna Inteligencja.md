@@ -165,3 +165,10 @@ $\{f_0, 1\}$
 
 ## Struktura układu sterowania rozmytego
 
+```
+graph LR;
+a>"Sygnał rzeczywisty"]==>rozm[Blok rozmywania]
+rozm==>bp[Blok przetwarzania]
+bp==>bw[Blok wyostrzania]
+bw==>s>Sterowanie]
+```
