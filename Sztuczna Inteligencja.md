@@ -1,3 +1,4 @@
+𝕶𝖔𝖗𝖇𝖎𝖙𝖈𝖍
 # Przykłady użycia
 ## Sprawdzanie parzystości
 ### Dane wejściowe
@@ -118,3 +119,49 @@ $f_4=\begin{Bmatrix}
 \cdots
 \end{Bmatrix}
 $
+
+# Logika rozmyta i zastosowania
+| logika klasyczna                 | logika rozmyta         |
+| -                                | -                      |
+| Coś albo jest w zbiorze albo nie | Może należeć częściowo |
+
+## Zastosowanie logiki rozmytej w diagnostyce obiektów technicznych
+
+```
+graph LR;
+u-->obiekt
+u-->model
+obiekt-->|y|o(( ))
+model-->|y_u|o
+o-->w[r=y-y_u]
+```
+$r$- sygnał residuum
+
+$r = \begin{cases}
+1 \text{ - gdy nie przekroczony} \\
+0 \text{ - gdy przekroczony}
+\end{cases}$
+
+### Rozmyta ocena wartości residuum
+Każdemu residuum $N$ przyporządkować można zmienną opisującą wyniki testu. W najgorszym przypadku
+zbiór posiada 2 wyniki, pozytywny i negatywny. 
+
+### Reguły wnioskowania rozmytego
+$R_0$ Jeżeli $S_1=P$ i $S_j=P$ to wszystko jest OK\
+$R_k$ Jeżeli $S_1 = N$ i $S_j = P$ to np. Uszkodzenie $f_k$
+
+### Rozmyte wnioskowanie
+Analiza zestawu reguł
+
+#### Rozmyta struktura diagnostyki
+```
+graph LR;
+residuum==>rozm[Blok rozmywania]
+rozm==>wn[Blok wnioskowania]
+wn==>diagnoza
+```
+$\{f_1, 0.8\}$ lub $\{f_3, 0.3\}$\
+$\{f_0, 1\}$
+
+## Struktura układu sterowania rozmytego
+
