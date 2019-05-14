@@ -64,3 +64,57 @@ sieci. Pełni też rolę wektora zadanego.
 
 ### Zestaw uczący
 $\{x^\mu,x^\mu\}, \mu=1,2...P$
+
+# Jakieś zadanie
+$f_0$ - stan normalny\
+$f_1$ - pęknięcie\
+$f_2$ - uszkodzenie pompy\
+$f_3$ - zarastanie
+
+Sygnały wejściowe:
+${P,T,Q}$
+
+Wyjścia:
+$f_0,f_1,f_2,f_3$ o wartości $0$ lub $1$\
+$1$ - poprawne\
+$0$ - niepoprawne
+
+```
+graph LR;
+P-->net["Sieć neuronowa"]
+T-->net
+Q-->net
+net-->f_0
+net-->f_1
+net-->f_2
+net-->f_3
+```
+## Struktura sieci
+3 warstwowa
+## Zestaw uczący
+$
+f_0= \begin{Bmatrix}
+100& 70& 200 &|1\\
+95& 78& 250 &|1\\
+\vdots &&&|1\\
+93& 71& 210 &|1
+\end{Bmatrix}
+$
+
+$
+f_1=\begin{Bmatrix}
+70&40&300&|1 \\
+20&45&200&|1\\
+\cdots&&&|1
+\end{Bmatrix}
+$
+
+$f_3=\begin{Bmatrix}
+\cdots
+\end{Bmatrix}
+$
+
+$f_4=\begin{Bmatrix}
+\cdots
+\end{Bmatrix}
+$
