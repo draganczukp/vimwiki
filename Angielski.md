@@ -227,4 +227,31 @@ conn-->eireles["Wireless"]
 4. Number of bits in a single clock cycle
 5. 8 bits
 6. Double Data Rate, which means that data is accessed twice per clock cycle
-7. 
+
+# S: Concession and contrast
+### 62.1
+2. I admit I was wrong
+3. The company acknowledges
+4. She conceded that we had done all we could...
+
+### 62.2
+2. No need to panic, after all, it doesn't start till six
+3. Shes bossy and sly, but for all of that, she _is_ a friend
+4. It's all very well saying you'll pay me back soon; _when_ is what _I_ want to know
+5. I know you've been very busy preparing for the school concert, that's all very well, but you
+   still mustn't neglect your homework
+
+### 62.3
+2. There is a huge discrepancy between what she says and what she does.
+3. When it comes to saving, Toby and Catalina are poles apart.
+4. There's a world of difference between being a student and being a teacher
+5. A yawning gap divides the standards for living in the north and in the south of the country
+
+### 62.5
+2. on the other hand
+3. on the other hand
+4. on the contrary
+5. on the contrary
+6. on the other hand
+
+
