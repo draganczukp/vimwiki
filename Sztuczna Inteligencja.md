@@ -269,3 +269,9 @@ $P_3(011) \rightarrow B$
 | $P_2$ |   1   |  0    |   2   |  3    |
 | $P_3$ |   3   |   2   |     0 |  1    |
 | $P_4$ |   2   |   3   |    1  |  0    |
+
+## Sieci ze współzawodnictwem poprzez eliminacje
+Dotychczas węzeł zwycięzca w modelu R-Z był określany poprzez wybór zewnętrzny, to jest węzeł z
+największym potencjałem membranowym $\phi_j$. Alternatywną procedurą jest procedura zezwalająca na
+eliminacje jednego przez drugiego, czyli w danym przypadku zwycięzcą jest węzeł który wyeliminował
+wszystkie pozostałe, lecz sam pozostaje aktywny.
