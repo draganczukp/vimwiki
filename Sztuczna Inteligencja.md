@@ -1,4 +1,8 @@
-𝕶𝖔𝖗𝖇𝖎𝖙𝖈𝖍
+# Egzamin
+25 czerwca (wtorek) 10:00 115 A-2\
+4 września (środa) 10:00 115 A-2
+
+# 𝕶𝖔𝖗𝖇𝖎𝖙𝖈𝖍
 # Przykłady użycia
 ## Sprawdzanie parzystości
 ### Dane wejściowe
@@ -172,3 +176,96 @@ rozm==>bp[Blok przetwarzania]
 bp==>bw[Blok wyostrzania]
 bw==>s>Sterowanie]
 ```
+
+# Sieci neuronowe
+## Nauczanie be nauczyciela (nienadzorowane)
+
+```
+graph LR;
+u1-->sn
+u2-->sn
+un-->sn
+sn-->y1
+sn-->y2
+sn-->yn
+```
+#### Zestaw uczący
+$\{u^\mu\}$
+
+Dotychczas przyjmowano, że cel uczenia był określony i nauczanie sieci sprowadzało się do realizacji
+tego celu. W nauczaniu bez nauczyciela (nienadzorowanym) kategorie celu są rozwijane przez sieć.
+Taki sposób nauczania rozszerza możliwości sztucznych sieci neuronowych do zadań rozpoznawania
+obrazów, kiedy klasyfikacje celu są nieznane
+
+## Nauczanie konkursowe - model Rumelharta-Zipsera (model R-Z)
+Model R-Z jest siecią klasyfikującą obrazy z jedną warstwą neuronów przetwarzających, które
+konkurują każdy z każdym. Dla sieci pokazywany jest zbiór obrazów uczących, ale nie ma podanego celu
+dla tych obrazów wyjściowych. Sieć taka organizuje obrazy uczące w zbiory klas samodzielnie. Model
+R-Z jest prostym schematem i ma małe praktyczne zastosowanie, ale ma zalety pozwalające na
+ilustracje wybranych głównych cech nauczania konkursowego
+
+```
+graph LR;
+u1-->j1((j1))
+u1-->j2
+u1-->jn
+u2-->j1
+u2-->j2((j2))
+u2-->jn
+un-->j1
+un-->j2
+un-->jn((jn))
+j1-->y1
+j2-->y2
+jn-->yn
+
+```
+### Uwagi
+1. Warstwy wejściowe i konkursowe są całkowicie połączone (każdy $i$ty węzeł jest połączony z każdym
+$j$tym węzłem)
+2. Wagi $W_{i,j}$ posiadają ograniczone wartości $[0,1]$ a ich suma jest równa 1, $0 < W_{ij} < 1,
+   \displaystyle\sum_{i=1}^{m}w_{ij} =1$
+3. Używa się kwantowania sygnałów wejściowych i wyjściowych
+
+### Zestaw uczący
+$\{u^\mu\}, \mu = 1,2,...,P$
+
+### Algorytm uczenia
+1. Eksperyment: podaj obraz z zestawu uczącego $u^\mu$ i wyznacz potencjał membranowy dla
+   poszczególnych wyjść. $\phi_j=\displaystyle\sum_{i=1}^m w_{ij} u_i$
+2. Analiza: polega na przyjęciu algorytmu/pojęcia "zwycięzca bierze wszystko". W danym przypadku
+   zasada ta pozwala na wyznaczenie zwycięzcy $\phi_j^z$, który posiada największą wartość
+   potencjału
+3. Konsumpcja zwycięstwa. Zwycięzcy przydzielane jest wyjście $+1$, a pozostałym $0$. Po określeniu
+   zwycięzcy wagi połączeń łączących węzeł zwycięzcy są uaktualniane według algorytmu:
+$\Delta_{ij}^\mu = \alpha(\frac{u_i^\mu}{q}-W_{ij}) = \alpha q^{-1}u_i^\mu - \alpha W_{ij}$\
+Gdzie:\
+$\alpha$- $(0<\alpha\leq1), \alpha=0.01 - 0.3$\
+$q$- liczba węzłów w warstwie wejściowej, które posiadają wartości $+1$
+
+Aby reguła była spełniona, należy sprawdzić warunek\
+$\displaystyle\sum_{i=1}^m\Delta W_{ij} = \alpha q^{-1}\displaystyle\sum_i^\mu u_i^\mu -
+\alpha\displaystyle\sum_{i-1}^\mu W_{ij} = 0$
+
+## Przykład
+### Struktura
+3 wejścia $(u_1, u_2, u_3$), 2 wyjścia ($A, B$)
+### Obrazy uczące
+$u^1 = (1 0 1)P_1$\
+$u^2 = (1 0 0)P_2$\
+$u^3 = (0 1 0)P_3$\
+$u^4 = (0 1 1)P_4$
+
+### Wyniki
+W wyniku uzyskujemy:\
+$P_1(101) \rightarrow A$\
+$P_2(100) \rightarrow A$\
+$P_3(010) \rightarrow B$\
+$P_3(011) \rightarrow B$
+
+|       | $P_1$ | $P_2$ | $P_3$ | $P_4$ |
+| -     | -     | -     | -     | -     |
+| $P_1$ |  0    |   1   |   3   |  2    |
+| $P_2$ |   1   |  0    |   2   |  3    |
+| $P_3$ |   3   |   2   |     0 |  1    |
+| $P_4$ |   2   |   3   |    1  |  0    |
