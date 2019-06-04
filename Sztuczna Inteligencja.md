@@ -297,11 +297,17 @@ sposób, aby ich wartości zbliżały się do wartości obrazu wejściowego. Zwy
 najbardziej prawdopodobnie może zwyciężyć współzawodnictwo powinien obrazy podobne do $u_i$ mieć w
 pewnej sekwencji
 6. Iteracyjne obliczanie współczynnika $\alpha$
-	$
-	\alpha = \alpha_0 (0.2-0.5)\\
-	\alpha_t = \alpha_0(1-\frac{t}{T})
-	$  
-	Gdzie  $t$ - bieżący krok, $T$ - ogólna liczba kroków
+
+$
+\alpha = \alpha_0 (0.2-0.5)\\
+\alpha_t = \alpha_0(1-\frac{t}{T})
+$  
+
+Gdzie  $t$ - bieżący krok, $T$ - ogólna liczba kroków
 7. Analiza rozmiaru sąsiedztwa $n_c$, na początku powinno być duże, a w procesie uczenia
    iteracyjnie pomniejszane  
 
+### Algorytm uogulniony
+1. Wyznaczyć zwycięzce i jego sąsiadów
+2. Korekta wag, aby poprawić dopasowanie wag do obrazu
+3. Korekta (stopniowe zmniejszanie) współczynnika $\alpha$ i rozmiaru sąsiedztwa
