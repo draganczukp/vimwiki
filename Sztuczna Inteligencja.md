@@ -281,7 +281,7 @@ Sieć konkursowa, która organizuje topologiczne odwzorowanie pokazujące rzeczy
 obrazami prezentowanymi jako wejścia do sieci
 ## Uwagi
 Sygnały wejściowe $u_i$ mają wartości ciągłe z przedziału $[0-1]$
-# Algorytm działania sieci
+## Algorytm działania sieci
 1. Wyznaczyć dobre $\vec{u}$ - Eksperyment
 2. Obliczyć odległość pomiędzy obrazem wejściowym a wagami  
    $d_i=\sqrt{\displaystyle\sum_j(u_i-w_{ij})^2}$
@@ -307,7 +307,39 @@ Gdzie  $t$ - bieżący krok, $T$ - ogólna liczba kroków
 7. Analiza rozmiaru sąsiedztwa $n_c$, na początku powinno być duże, a w procesie uczenia
    iteracyjnie pomniejszane  
 
-### Algorytm uogulniony
+## Algorytm uogólniony
 1. Wyznaczyć zwycięzce i jego sąsiadów
 2. Korekta wag, aby poprawić dopasowanie wag do obrazu
 3. Korekta (stopniowe zmniejszanie) współczynnika $\alpha$ i rozmiaru sąsiedztwa
+
+## Przykład
+Zbiór danych z dwoma atrybutami: wiek i dochód (znormalizowane). Należy użyć sieci Kohonena o
+rozmiarach $2\times2$, aby odkryć ukryte grupy w zbiorze danych
+
+### Dane
+$\{\vec{u}^\mu\}=$
+| lp. | wiek           | dochód          | opis                           |
+| -   | -              | -               | -                              |
+| 1   | $u_{11} = 0.8$ | $u_{1,2} = 0.8$ | Osoby starsze z dużym dochodem |
+| 2   | $u_{21} = 0.8$ | $u_{2,2} = 0.1$ | Osoby starsze z małym dochodem |
+| 3   | $u_{31} = 0.2$ | $u_{3,2} = 0.9$ | Osoby młodsze z dużym dochodem |
+| 4   | $u_{41} = 0.1$ | $u_{4,2} = 0.1$ | Osoby młodsze z małym dochodem |
+
+### Sieć
+4 neurony wyjściowe $1,2,3,4$, 2 wejściowe $\{\text{wiek}, \text{dochód}\}$\
+Ze względu na mały rozmiar sieci, można przyjąć promień sąsiedztwa $0$\
+$\alpha=0.5$
+
+#### Wagi
+$
+w_{11}=0.9,
+w_{21}=0.8,
+w_{12}=0.9,
+w_{22}=0.2,\\
+w_{13}=0.1,
+w_{23}=0.8,
+w_{14}=0.1,
+w_{24}=0.2
+$
+### Uczenie
+1. Obraz wejściowy nr. 1 $u_1=(0.8, 0.8)$
