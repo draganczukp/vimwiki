@@ -275,3 +275,33 @@ Dotychczas węzeł zwycięzca w modelu R-Z był określany poprzez wybór zewnę
 największym potencjałem membranowym $\phi_j$. Alternatywną procedurą jest procedura zezwalająca na
 eliminacje jednego przez drugiego, czyli w danym przypadku zwycięzcą jest węzeł który wyeliminował
 wszystkie pozostałe, lecz sam pozostaje aktywny.
+
+# Sieć Kohonena
+Sieć konkursowa, która organizuje topologiczne odwzorowanie pokazujące rzeczywiste związki pomiędzy
+obrazami prezentowanymi jako wejścia do sieci
+## Uwagi
+Sygnały wejściowe $u_i$ mają wartości ciągłe z przedziału $[0-1]$
+# Algorytm działania sieci
+1. Wyznaczyć dobre $\vec{u}$ - Eksperyment
+2. Obliczyć odległość pomiędzy obrazem wejściowym a wagami  
+   $d_i=\sqrt{\displaystyle\sum_j(u_i-w_{ij})^2}$
+3. Wybór zwycięzcy dla którego $d_i$ jest najmniejsze
+4. Wybierz sąsiedztwo otaczające węzeł zwycięzcy  
+	$n_c$- zbiór węzłów w sąsiedztwie zwycięzcy
+5. Uaktualnić wszystkie wagi w sąsiedztwie zwycięzcy $c(w_{ij})$  
+   $\Delta w_{ij}^c = \alpha (u_i - w_{ij}^c)$  
+   $w_{ij} = w_{ij}+\Delta w_{ij}^c$  
+   $0.2 < \alpha < 0.5$  
+Z podanej reguły uczenia wynika, że wagi $w_{ij}$ w otoczeniu zwycięzcy są modyfikowane w taki
+sposób, aby ich wartości zbliżały się do wartości obrazu wejściowego. Zwycięzca $c$, który
+najbardziej prawdopodobnie może zwyciężyć współzawodnictwo powinien obrazy podobne do $u_i$ mieć w
+pewnej sekwencji
+6. Iteracyjne obliczanie współczynnika $\alpha$
+	$
+	\alpha = \alpha_0 (0.2-0.5)\\
+	\alpha_t = \alpha_0(1-\frac{t}{T})
+	$  
+	Gdzie  $t$ - bieżący krok, $T$ - ogólna liczba kroków
+7. Analiza rozmiaru sąsiedztwa $n_c$, na początku powinno być duże, a w procesie uczenia
+   iteracyjnie pomniejszane  
+
