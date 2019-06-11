@@ -343,3 +343,21 @@ w_{24}=0.2
 $
 ### Uczenie
 1. Obraz wejściowy nr. 1 $u_1=(0.8, 0.8)$
+
+## Przykład zastosowania sieci Kohonena do budowy klasyfikatora uszkodzeń rurociągu przesyłu medium
+### Wejścia:
+$p,q,T,V$
+### Scenariusze (wyjścia)
+- $f_0$ - stan prawidłowy
+- $f_1$ - pęknięcie
+- $f_2$ - zarastanie
+- $f_3$ - inne
+
+### Zbiór uczący
+$\{\vec{u}\}, \vec{u} = [p,q,T,v]^T$  
+$\{\vec{u^\mu}\}, \mu = 1,2,3...$
+
+$\vec{u}^{f_0}= \begin{bmatrix}
+200&150&30&20\\
+\vdots & \vdots & \vdots &\vdots
+\end{bmatrix}$
