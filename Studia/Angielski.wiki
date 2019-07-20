@@ -1,5 +1,5 @@
 <!-- vim:spelllang=en_US -->
-# S: The features of academic English
+= S: The features of academic English =
 
 ```
 <!--graph TD;-->
@@ -11,24 +11,24 @@ S-->U
 S-->C
 S-->I
 ```
-### 1. Vocab
+=== 1. Vocab ===
 - Specific, some jargon (course of study)
 - More formal (upper key, "high brow")
 - ! word formation
 
-### 2. Grammar
+=== 2. Grammar ===
 - Impersonal: ~~you can see~~ -> it can be seen
 - Simple
 - Clear, logical, organized
 
-### 3. Concise
+=== 3. Concise ===
 
-### 4. Objective
+=== 4. Objective ===
 
-### 5. Referenced
+=== 5. Referenced ===
 
 
-# S: "Campus" English - defining
+= S: "Campus" English - defining =
 
 |word|literar/common|uni/technical|
 |:-:|:-:|:-:|:-:|
@@ -57,9 +57,9 @@ lhh[head]-->rd[of department]
 lo[office]-->rh[hours]
 ```
 
-# S: Who is who in College
+= S: Who is who in College =
 
-### Piramid
+=== Piramid ===
 ```
 <!--graph LR;-->
 dean[Dean]
@@ -77,9 +77,9 @@ soph["Sophomore (2nd)"]-->und
 fres["Freshman (1st)"]-->und
 ```
 
-# S: Describing flowcharts - sequences
+= S: Describing flowcharts - sequences =
 
-### Types of charts
+=== Types of charts ===
 - Pie chart
 - Bar chart
 - Table (Grid)
@@ -94,9 +94,9 @@ Eventually implies problems
 
 "I should like" --> More formal "I would like"
 
-# S: Word formation
+= S: Word formation =
 
-### Change part of speech
+=== Change part of speech ===
 
 - Verb: to store (data)
 - Noun: storage
@@ -105,10 +105,10 @@ Eventually implies problems
 
 
 ---
-# IT English
+= IT English =
 ---
 
-# S: Networks
+= S: Networks =
 
 interconnected: połączona ze sobą
 
@@ -142,8 +142,8 @@ conn-->wired["Wired"]
 conn-->eireles["Wireless"]
 ```
 
-# S: Cause and effect, purpose, result, reason
-### Listing and adding
+= S: Cause and effect, purpose, result, reason =
+=== Listing and adding ===
 - (+) and (+)
 - firstly
 - secondly
@@ -151,12 +151,12 @@ conn-->eireles["Wireless"]
 - next/then
 - moreover
 - besides
-### Contrasting
+=== Contrasting ===
 - (+) but (-)
 - on one hand
 - on the other hand
 - however
-### Cause and effect
+=== Cause and effect ===
 - because
 - because of
 - so
@@ -164,20 +164,20 @@ conn-->eireles["Wireless"]
 - thanks to
 - result in
 - due to = because of
-### Purpose = Aim, Target, Objective
+=== Purpose = Aim, Target, Objective ===
 - to
 - in order to
 - so that
 
-## Zadania
-### 36.3
+== Zadania ==
+=== 36.3 ===
 1. As
 2. lead to
 3. so that
 4. cause
 5. therefore
 
-### 36.4
+=== 36.4 ===
 1. ... because I want to read books in English
 2. ... can listen to music on the go
 3. ... I have no time during the week
@@ -187,7 +187,7 @@ conn-->eireles["Wireless"]
 7. ... an international career
 8. ... the number of terms
 
-### 34.3
+=== 34.3 ===
 1. Despite taking a map
 2. whereas
 3. moreover
@@ -195,9 +195,9 @@ conn-->eireles["Wireless"]
 5. still
 6. as well
 
-# S: Links - contrasting memory
-## Zadania
-### 34.4
+= S: Links - contrasting memory =
+== Zadania ==
+=== 34.4 ===
 1. I was able to follow what she was saying even though she was speaking too fast
 2. I was able to follow what she was saying whereas others couldn't keep up
 3. We enjoyed the holiday in spite of the weather
@@ -205,7 +205,7 @@ conn-->eireles["Wireless"]
 5. The exam was very difficult. However, I got full marks
 6. Although it was a very long film, I still have some popcorn left
 
-### Translate
+=== Translate ===
 1. This device is still in use, even though there are newer models available
 2. The office replaced the computers despite the fact that they were still working
 3. Despite it's simplicity this game is still popular
@@ -219,7 +219,7 @@ conn-->eireles["Wireless"]
 11. Despite multiple interesting features this program didn't become popular
 12. Robots are difficult to program. What's more their price is also considerable
 
-### Questions
+=== Questions ===
 1. Data has to be stored somewhere. If RAM is full, this data is stored on disk which is
    significantly slower than RAM
 2. Random Access Memory
@@ -228,26 +228,26 @@ conn-->eireles["Wireless"]
 5. 8 bits
 6. Double Data Rate, which means that data is accessed twice per clock cycle
 
-# S: Concession and contrast
-### 62.1
+= S: Concession and contrast =
+=== 62.1 ===
 2. I admit I was wrong
 3. The company acknowledges
 4. She conceded that we had done all we could...
 
-### 62.2
+=== 62.2 ===
 2. No need to panic, after all, it doesn't start till six
 3. Shes bossy and sly, but for all of that, she _is_ a friend
 4. It's all very well saying you'll pay me back soon; _when_ is what _I_ want to know
 5. I know you've been very busy preparing for the school concert, that's all very well, but you
    still mustn't neglect your homework
 
-### 62.3
+=== 62.3 ===
 2. There is a huge discrepancy between what she says and what she does.
 3. When it comes to saving, Toby and Catalina are poles apart.
 4. There's a world of difference between being a student and being a teacher
 5. A yawning gap divides the standards for living in the north and in the south of the country
 
-### 62.5
+=== 62.5 ===
 2. on the other hand
 3. on the other hand
 4. on the contrary

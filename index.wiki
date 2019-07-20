@@ -1,0 +1,10 @@
+= Contents =
+    - [[#Studia|Studia]]
+    - [[#Work|Work]]
+
+= Studia =
+- [[Studia/angielski]]
+- [[Studia/Sztuczna Inteligencja]]
+
+= Work =
+- [[Work/tasks]]
