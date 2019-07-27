@@ -2,7 +2,6 @@
 25 czerwca (wtorek) 10:00 115 A-2\
 4 września (środa) 10:00 115 A-2
 
-= 𝕶𝖔𝖗𝖇𝖎𝖙𝖈𝖍 =
 = Przykłady użycia =
 == Sprawdzanie parzystości ==
 === Dane wejściowe ===
