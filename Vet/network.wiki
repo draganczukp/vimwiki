@@ -1,0 +1,18 @@
+
+= Materiały =
+== Kable ==
+Skrętka nie ekranowana CAT 5e
+7 kabli, do każdego gniazda
+
+| Miejsce   | Odległość (cm) | Ile gniazdek | Ile kabla (cm)     |
+| P1        | 280            | 1            | 300                |
+| P2        | 2130           | 1            | 2200               |
+| P3        | 2130           | 1            | 2200               |
+| S1        | 2315           | 1            | 2500               |
+| S2        | 1780           | 1            | 2000               |
+| G1        | 2365           | 2            | 5000    (2 * 2500) |
+| II Piętro |                |              |                    |
+| Razem     | 11000          | 7            | 14200              |
+
+== Gniazdka ==
+
